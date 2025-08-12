@@ -1,0 +1,6 @@
+<div class="container">
+    <%= render "articles/navbar"%>
+    <% @articles.each do |article| %>
+    <%= render "articles/article", article: article %>
+    <% end %>
+</div>
