@@ -1,0 +1,15 @@
+<div class="container">
+     <%= render "articles/navbar"%>
+     <div>
+        <div>
+            <h1><%= @article.title %></h1>
+            <p><%= @article.content %></p>
+        </div>  
+        <div>
+            <%= link_to article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Delete article?" }, class: 'btn btn-danger' do %>
+                <i class="fa-solid fa-circle-xmark"></i>
+            <% end %>
+            <%= link_to "Back", articles_path, class: "btn btn-secondary" %>
+        </div>
+     </div>
+</div>
